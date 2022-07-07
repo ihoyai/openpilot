@@ -85,7 +85,7 @@ class CarInterface(CarInterfaceBase):
       ret.lateralTuning.torque.deadzone = 0.0
 
 
-    ret.steerRatio = 16.5
+    ret.steerRatio = 17.0
     ret.steerActuatorDelay = 0.1
     ret.steerRateCost = 0.4
 
