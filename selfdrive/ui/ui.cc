@@ -308,7 +308,7 @@ void Device::updateBrightness(const UIState &s) {
     brightness = 0;
   }
 
-  brightness = 50;
+  
   
   if (brightness != last_brightness) {
     if (!brightness_future.isRunning()) {
