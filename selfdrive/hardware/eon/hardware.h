@@ -23,13 +23,13 @@ public:
   static void reboot() { std::system("reboot"); };
   static void poweroff() { std::system("LD_LIBRARY_PATH= svc power shutdown"); };
   static void set_brightness(int percent) {
-    //std::ofstream brightness_control("/sys/class/leds/lcd-backlight/brightness");
+    std::ofstream brightness_control("/sys/class/leds/lcd-backlight/brightness");
     
-    percent = 10;
-    //if (brightness_control.is_open()) {
-      //brightness_control << (int)(percent * (255/100.)) << "\n";
-      //brightness_control.close();
-    //}
+    //percent = 10;
+    if (brightness_control.is_open()) {
+      brightness_control << (int)(percent * (255/100.)) << "\n";
+      brightness_control.close();
+    }
   };
   static void set_display_power(bool on) {
     auto dtoken = android::SurfaceComposerClient::getBuiltInDisplay(android::ISurfaceComposer::eDisplayIdMain);
