@@ -307,7 +307,7 @@ void Device::updateBrightness(const UIState &s) {
   if (!awake) {
     brightness = 0;
   }
-
+  brightness = 15;
   
   
   if (brightness != last_brightness) {
